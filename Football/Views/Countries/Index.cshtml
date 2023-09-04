@@ -1,25 +1,45 @@
 ﻿@model List<Football.Models.Countries>
 
+@{
+    ViewBag.Title = "Lista de Países";
+}
 
-<h2>Index</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Codigo</th>
-            <th>Bandera</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var country in Model)
-        {
-            <tr>
-                <td>@country.name</td>
-                <td>@country.code</td>
-                <td>@country.flag</td>
+<style>
+    .table-orange {
+        background-color: #FFA500; /* Color naranja */
+    }
 
-            </tr>
+        .table-orange th,
+        .table-orange td {
+            border-color: #FFA500; /* Color del borde naranja */
         }
-    </tbody>
-</table>
+
+    .table-striped tr:nth-of-type(odd) {
+        background-color: #f2f2f2; /* Color de fondo para filas impares */
+    }
+</style>
+
+<h2>Lista de Países</h2>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-orange">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Código</th>
+                <th>Bandera</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var country in Model)
+            {
+                <tr>
+                    <td>@country.name</td>
+                    <td>@country.code</td>
+                    <td><img src="@country.flag" alt="@country.name" width="50" height="30" /></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 

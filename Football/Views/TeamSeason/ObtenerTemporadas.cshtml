@@ -3,26 +3,37 @@
     ViewBag.Title = "ObtenerTemporadas";
 }
 
+<style>
+    .table-light-orange {
+        background-color: #FFE4B5; /* Color naranja claro */
+    }
+
+        .table-light-orange th {
+            background-color: #FFD700; /* Color naranja dorado para el encabezado */
+        }
+</style>
+
 <h2>ObtenerTemporadas</h2>
 @model List<int>
 
 <h2>Temporadas del Equipo</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Año</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var season in Model)
-        {
+<div class="table-responsive">
+    <table class="table table-bordered table-light-orange">
+        <thead>
             <tr>
-                <td>@season</td>
-
+                <th>Año</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var season in Model)
+            {
+                <tr>
+                    <td>@season</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 

@@ -3,18 +3,58 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title style="color: #007bff;">@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+        body {
+            background-image: url('tu-imagen-de-fondo.jpg');
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .navbar-toggle {
+            background-color: #333;
+        }
+
+        .navbar-nav > li > a {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .container.body-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar" style="background-color: #333;"></span>
+                    <span class="icon-bar" style="background-color: #333;"></span>
+                    <span class="icon-bar" style="background-color: #333;"></span>
                 </button>
                 @Html.ActionLink("Prueba Acumulativa", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
@@ -40,3 +80,9 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+
+
+
+
+
