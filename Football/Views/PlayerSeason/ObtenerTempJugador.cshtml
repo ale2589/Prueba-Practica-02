@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "ObtenerTempJugador";
+}
+
+<h2>Obtener Temporadas Jugador</h2>
+
+@model List<int>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Año</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var season in Model)
+        {
+            <tr>
+                <td>@season</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

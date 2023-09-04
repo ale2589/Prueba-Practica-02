@@ -1,0 +1,25 @@
+﻿@model List<Football.Models.Countries>
+
+
+<h2>Index</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Bandera</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var country in Model)
+        {
+            <tr>
+                <td>@country.name</td>
+                <td>@country.code</td>
+                <td>@country.flag</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

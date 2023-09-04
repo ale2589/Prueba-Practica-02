@@ -1,0 +1,32 @@
+﻿@model List<Football.Models.TeamData>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>País</th>
+            <th>Fundado</th>
+            <th>Nacional</th>
+            <th>Logo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var team in Model)
+        {
+        <tr>
+            <td>@team.Team.name</td>
+            <td>@team.Team.code</td>
+            <td>@team.Team.country</td>
+            <td>@team.Team.founded</td>
+            <td>@team.Team.national</td>
+            <td>@team.Team.logo</td>
+
+
+
+        </tr>
+        }
+    </tbody>
+</table>

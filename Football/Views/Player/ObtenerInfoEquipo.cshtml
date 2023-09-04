@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "ObtenerInfoEquipo";
+}
+
+<h2>ObtenerInfoEquipo</h2>
+@model Football.Models.TeamInfo
+
+<h2>Información del Equipo</h2>
+
+<p>ID del Equipo: @Model.id</p>
+<p>Nombre del Equipo: @Model.name</p>
+<p>Logo del Equipo: <img src="@Model.logo" alt="Logo del Equipo" /></p>
+
+<h2>Jugadores del Equipo</h2>
+
+
+    @if (Model.players != null)
+    {
+        <ul>
+            @foreach (var player in Model.players)
+            {
+                <li>
+                    <p>Nombre del Jugador: @player.name</p>
+                    <p>Edad: @player.age</p>
+                    <p>Número: @player.number</p>
+                    <p>Posición: @player.position</p>
+                    <p>Foto: <img src="@player.photo" alt="Foto del Jugador" /></p>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No se encontraron jugadores para este equipo.</p>
+    }
+
+
