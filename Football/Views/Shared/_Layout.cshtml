@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
     <style>
         body {
-            background-image: url('tu-imagen-de-fondo.jpg');
+            background-image: url('https://img.freepik.com/vector-premium/fondo-tecnologia-circuito-alta-tecnologia-digital_29971-542.jpg');
             background-size: cover;
             font-family: 'Arial', sans-serif;
             font-size: 18px;
@@ -51,18 +51,15 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar" style="background-color: #333;"></span>
-                    <span class="icon-bar" style="background-color: #333;"></span>
-                    <span class="icon-bar" style="background-color: #333;"></span>
-                </button>
-                @Html.ActionLink("Prueba Acumulativa", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+                @Html.ActionLink("Prueba Acumulativa", "Home", "Países", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Temporadas Jugadores", "ObtenerTempJugador", "PlayerSeason")</li>
                     <li>@Html.ActionLink("Países", "Index", "Countries")</li>
+                    <li>@Html.ActionLink("Equipos", "Index", "Teams")</li>
+
                 </ul>
             </div>
         </div>
@@ -80,6 +77,10 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+
+
+
 
 
 
